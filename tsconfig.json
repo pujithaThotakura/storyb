@@ -1,0 +1,35 @@
+// timeline-components/tsconfig.json
+{
+  "compilerOptions": {
+    /* Base Options */
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    
+    /* Strictness & Error Checking - CRITICAL FOR ASSIGNMENT */
+    "strict": true,                         /* Enable all strict type-checking options (REQUIRED). */
+    "noImplicitAny": true,                  /* Disallow 'any' types that are implicitly inferred. */
+    "noUnusedLocals": true,                 /* Report errors on unused local variables. */
+    "noUnusedParameters": true,             /* Report errors on unused parameters. */
+    "noFallthroughCasesInSwitch": true,     /* Report errors for fallthrough cases in switch statement. */
+    
+    /* Module Resolution */
+    "esModuleInterop": true,                /* Allows default imports from modules with no default export. */
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,                /* Ensures that each file can be safely compiled without depending on other files. */
+
+    /* Output and Source Maps */
+    "outDir": "./dist",
+    "sourceMap": true,
+    "skipLibCheck": true                    /* Skip type checking all .d.ts files. */
+  },
+  "include": ["src"],
+  "references": [
+    // This reference is standard when using a separate tsconfig.node.json for build scripts (common with Vite)
+    { "path": "./tsconfig.node.json" }
+  ]
+}

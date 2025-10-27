@@ -1,0 +1,35 @@
+/* src/styles/globals.css */
+
+/* --- 1. Essential Tailwind Directives ---
+  These three lines are mandatory to inject all of Tailwind's base styles, 
+  components, and utility classes, including those defined in tailwind.config.js.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- 2. Custom Project Base Styles ---
+  Sets default font/color to match the neutral palette (neutral-900 text on neutral-100 background).
+*/
+body {
+  @apply bg-neutral-100 text-neutral-900;
+}
+
+/* --- 3. Enterprise UI/UX Scrollbar Formatting ---
+  Custom scrollbar styling for a cleaner, more professional look across browsers
+  (primarily targets WebKit-based browsers like Chrome, Safari).
+*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  /* Use neutral color tokens for the scrollbar thumb */
+  @apply bg-neutral-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400;
+}
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}

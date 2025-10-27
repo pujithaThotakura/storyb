@@ -1,0 +1,34 @@
+/* src/styles/animations.css */
+
+/* --- 1. Keyframe Definition for Sidebar Slide-In --- */
+@keyframes slide-in-right {
+  from {
+    /* Starts completely off the right edge of the viewport */
+    transform: translateX(100%);
+  }
+  to {
+    /* Slides into view */
+    transform: translateX(0);
+  }
+}
+
+/* --- 2. Animation Class Application (Utility) --- */
+
+/* Class to be applied to the TaskDetailSidebar or a Modal component */
+.slide-in-right {
+  animation: slide-in-right 0.3s ease-out forwards;
+}
+
+/* --- 3. Keyframe Definition for Simple Fade-In (e.g., for Backdrop) --- */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.2s ease-out forwards;
+}
